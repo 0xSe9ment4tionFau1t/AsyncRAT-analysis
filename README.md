@@ -1,4 +1,4 @@
-# XWorm Malware Analysis — Multi-Stage .NET Loader
+# AsyncRAT Malware Analysis — Multi-Stage .NET Loader
 
 **Report ID:** MAR-XWORM-2026-01  
 **Date:** 31 July 2026  
@@ -61,7 +61,7 @@ Two separate bitmap resources carry executable payloads. The `City` bitmap store
 The loader creates 32-bit `C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe` with flags `CREATE_SUSPENDED | CREATE_NO_WINDOW`, maps the XWorm PE into the remote process, updates the PEB image-base pointer, modifies the suspended thread context to point at the XWorm entry point, and resumes. This is T1055.012 — the process is not executing a malicious build project.
 
 **User-level persistence without admin**  
-The sample operated as a standard user (`WIN10\adam`, administrator check returned `false`). Persistence runs through `%APPDATA%\PtwLWb.exe` and an HKCU Run value that launches a hidden PowerShell script from `%TEMP%`.
+The sample operated as a standard user (`WIN10\user`, administrator check returned `false`). Persistence runs through `%APPDATA%\PtwLWb.exe` and an HKCU Run value that launches a hidden PowerShell script from `%TEMP%`.
 
 **XWorm configuration**
 
