@@ -108,7 +108,7 @@ The sample operated as a standard user (`WIN10\user`, administrator check return
 - Flag `.NET` applications that load assemblies from byte arrays and immediately select types or methods by numeric index.
 - Inspect direct outbound TCP connections from `MSBuild.exe` to non-standard ports, especially port 4445.
 
-See [`detections/kql.md`](detections/kql.md) for Microsoft Defender XDR hunting queries and [`detections/yara.yar`](detections/yara.yar) for YARA rules.
+See [`detections/kql.md`](detections/kql.md) for Microsoft Defender XDR hunting queries and [`detections/yara.yar`](detections/yara.yar) for YARA rules. Anyway those rules need testing and and treat them as a draft for actual detection rules.
 
 ---
 
