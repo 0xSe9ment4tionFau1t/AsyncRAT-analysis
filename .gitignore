@@ -1,0 +1,19 @@
+# Malware samples — never commit actual malware
+*.exe
+*.dll
+*.bin
+*.vbs
+*.ps1
+*.bat
+
+# Analysis tool artifacts
+*.dmp
+*.pcap
+*.pcapng
+
+# Editor / OS
+.vscode/
+*.swp
+*~
+Thumbs.db
+.DS_Store
